@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS PEOPLE;
+
+CREATE TABLE PEOPLE
+(
+    ID    INTEGER PRIMARY KEY, /* Integer타입의 필드에 고유값 속성만 주면 알아서 AUTO_INCREMENT속성을 준것과 같이 동작 */
+    NAME  VARCHAR(50),
+    BIRTH VARCHAR(20)
+);
