@@ -1,4 +1,4 @@
-package com.tistory.aircook.playground.controller
+package com.tistory.aircook.kopringsample.controller
 
 import org.springframework.web.bind.annotation.*
 import java.util.Optional

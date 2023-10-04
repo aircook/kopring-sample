@@ -2,7 +2,7 @@
 //https://velog.io/@freddiey/DTO-%EB%A7%A4%ED%95%91kotlin
 //sealed class
 //https://devs0n.tistory.com/66
-package com.tistory.aircook.playground.entity
+package com.tistory.aircook.kopringsample.entity
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
