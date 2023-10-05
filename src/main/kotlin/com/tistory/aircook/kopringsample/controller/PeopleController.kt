@@ -14,8 +14,21 @@ class PeopleController(val peopleService: PeopleService) {
     val logger: Logger = LoggerFactory.getLogger(PeopleController::class.java)
 
     @GetMapping
-    fun getUser(): Iterable<People> {
-        logger.info("getUser mathod call!")
+    fun findAll(): Iterable<People> {
+        logger.debug("findAll")
         return peopleService.findAll()
     }
+
+    @GetMapping("/{id}")
+    fun findById(@PathVariable("id") id: Long): People? {
+        logger.debug("findById, id is [{}]", id)
+        return peopleService.findById(id)
+    }
+
+    @GetMapping("/search")
+    fun findByName(@RequestParam(required = false) name: String): People? {
+        logger.debug("findByName, id name [{}]", name)
+        return peopleService.findByName(name)
+    }
+
 }
