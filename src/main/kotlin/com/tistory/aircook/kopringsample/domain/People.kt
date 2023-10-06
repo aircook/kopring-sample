@@ -2,7 +2,7 @@
 //https://velog.io/@freddiey/DTO-%EB%A7%A4%ED%95%91kotlin
 //sealed class
 //https://devs0n.tistory.com/66
-package com.tistory.aircook.kopringsample.entity
+package com.tistory.aircook.kopringsample.domain
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -17,4 +17,25 @@ class People(
     var birth: String
 ) {
     constructor(name: String, birth: String) : this(null, name, birth)
+}
+
+data class PeopleDto(
+    var id: Long? = null,
+    var name: String,
+    var birth: String
+) {
+
+    constructor() : this(null, "", "")
+
+    fun toEntity(): People {
+        return People(id = id, name = name, birth = birth)
+    }
+
+    companion object {
+        fun fromEntity(people: People): PeopleDto {
+            return people.run {
+                PeopleDto(id = id, name = name, birth = birth)
+            }
+        }
+    }
 }

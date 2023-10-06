@@ -1,6 +1,6 @@
 package com.tistory.aircook.kopringsample.repository
 
-import com.tistory.aircook.kopringsample.entity.People
+import com.tistory.aircook.kopringsample.domain.People
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue

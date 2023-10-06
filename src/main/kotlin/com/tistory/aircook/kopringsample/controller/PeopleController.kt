@@ -1,11 +1,11 @@
 package com.tistory.aircook.kopringsample.controller
 
 import com.tistory.aircook.kopringsample.service.PeopleService
-import com.tistory.aircook.kopringsample.entity.People
+import com.tistory.aircook.kopringsample.domain.People
+import com.tistory.aircook.kopringsample.domain.PeopleDto
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
-import java.util.Optional
 
 @RestController
 @RequestMapping("/people")
@@ -20,7 +20,7 @@ class PeopleController(val peopleService: PeopleService) {
     }
 
     @GetMapping("/{id}")
-    fun findById(@PathVariable("id") id: Long): People? {
+    fun findById(@PathVariable("id") id: Long): PeopleDto {
         logger.debug("findById, id is [{}]", id)
         return peopleService.findById(id)
     }
