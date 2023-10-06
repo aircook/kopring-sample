@@ -1,7 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-
-
 plugins {
     id("org.springframework.boot") version "3.1.4"
     id("io.spring.dependency-management") version "1.1.3"
@@ -9,15 +7,15 @@ plugins {
     val kotlinPluginVersion = "1.9.10"
     //https://kotlinlang.org/docs/all-open-plugin.html#spring-support
     //kotlin("jvm") version "1.8.22"
-    kotlin("jvm") version "${kotlinPluginVersion}"
+    kotlin("jvm") version kotlinPluginVersion
     //kotlin("plugin.spring") version "1.8.22"
-    kotlin("plugin.spring") version "${kotlinPluginVersion}"
+    kotlin("plugin.spring") version kotlinPluginVersion
     //kotlin("plugin.jpa") version "1.5.21" // JPA 사용을 위한 플러그인 추가 옵션
-    kotlin("plugin.jpa") version "${kotlinPluginVersion}"
+    kotlin("plugin.jpa") version kotlinPluginVersion
     //id ("org.jetbrains.kotlin.plugin.allopen") version "1.5.21" // allOpen에 지정한 어노테이션으로 만든 클래스에 open 키워드를 적용
-    kotlin("plugin.allopen") version "${kotlinPluginVersion}"
+    kotlin("plugin.allopen") version kotlinPluginVersion
     //id ("org.jetbrains.kotlin.plugin.noarg") version "1.5.21" //  자동으로 Entity, Embeddable, MappedSuperClass 어노테이션이 붙어있는 클래스에 자동으로 no-arg 생성자를 생성
-    kotlin("plugin.noarg") version "${kotlinPluginVersion}"
+    kotlin("plugin.noarg") version kotlinPluginVersion
 }
 
 group = "com.tistory.aircook"
